@@ -162,15 +162,6 @@
     allowPageScroll: "vertical"
   });
 
-  // Skills section
-  $('#skills').waypoint(function () {
-    $('.progress .progress-bar').each(function () {
-      $(this).css("width", $(this).attr("aria-valuenow") + '%');
-    });
-  }, {
-    offset: '80%'
-  });
-
   // jQuery counterUp (used in Facts section)
   $('[data-toggle="counter-up"]').counterUp({
     delay: 10,
@@ -190,14 +181,6 @@
     portfolioIsotope.isotope({
       filter: $(this).data('filter')
     });
-  });
-
-  // Clients carousel (uses the Owl Carousel library)
-  $(".clients-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    display: 1,
   });
 
 })(jQuery);
