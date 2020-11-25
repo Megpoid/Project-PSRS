@@ -58,3 +58,32 @@ function sendMessage() {
     console.log('FAILED...', error);
   });
 }
+
+$(document).ready(function() {
+  $(".exchange-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    responsive: { 
+      0: { items: 2 }, 768: { items: 4 }, 900: { items: 6 }
+    }
+  });
+})
+
+var faqAcc = document.getElementsByClassName('faq-accordion')
+var i;
+
+for (i = 0; i < faqAcc.length; i++) {
+  faqAcc[i].addEventListener('click', function() {
+    this.classList.toggle('accordion-active');
+
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+$('.faq-accordion:first-child').click();

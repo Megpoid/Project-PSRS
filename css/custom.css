@@ -118,8 +118,9 @@
     background-image: url(../img/roadmap.jpg);
 }
 
-#token {
+#detail-token {
     padding: 40px 0;
+    background-color: #fafafa;
 }
 
 .token-information {
@@ -171,14 +172,47 @@
 #faq {
     padding-top: 30px;
     height: 100%;
-    background: linear-gradient(90deg, #6f42c1 15%, #fff 25%);
 }
 
-#faq #accordion .card .card-header {
-    background: #6f42c1;
-}
-
-#faq #accordion .card .card-header .card-link{
+.faq-accordion {
+    background-color: #6f42c1;
     color: #fff;
-    font-weight: bold;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.faq-accordion::after {
+    content: '\002B';
+    font-size: 13px;
+    color: #fff;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion-active,
+.faq-accordion:hover {
+    background-color: #fff;
+    color: #6f42c1;
+    border: solid #6f42c1 2px;
+}
+
+.accordion-active::after {
+    content: "\2212";
+    color: #6f42c1;
+}
+
+.accordion-panel {
+    padding: 0 18px;
+    margin: 0px 10px;
+    height: 100%;
+    background-color: #c4c4c4;
+    color: #000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
