@@ -68,6 +68,14 @@ $(document).ready(function() {
       0: { items: 2 }, 768: { items: 4 }, 900: { items: 6 }
     }
   });
+  $(".upcoming-carousel").owlCarousel({
+    autoplay: false,
+    dots: true,
+    loop: false,
+    responsive: { 
+      0: { items: 2 }, 768: { items: 4 }, 900: { items: 6 }
+    }
+  });
 })
 
 var faqAcc = document.getElementsByClassName('faq-accordion')
